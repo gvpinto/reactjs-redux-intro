@@ -13,14 +13,13 @@ function AccountOperations() {
 
     const dispatch = useDispatch();
 
-    console.log(balance);
 
     function handleDeposit() {
         if (depositAmount) {
             dispatch(deposit(depositAmount, currency));
         }
         setDepositAmount("");
-        setCurrency("");
+        setCurrency("USD");
     }
 
     function handleWithdrawal() {
